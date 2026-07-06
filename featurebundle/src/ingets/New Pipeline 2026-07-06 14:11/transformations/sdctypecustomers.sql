@@ -14,5 +14,6 @@ stored as scd type 2;
 
 
 create or refresh materialized view prod.prod.customer_orders as 
-select customer_id, count(*) as total_orders, sum(total) as total_revenue
+select c.customer_id, count(*) as total_orders, sum(o.amount) as total_revenue
 from prod.prod.customers c join dev.silver.orders o on c.customer_id = o.customer_id
+group by all;
