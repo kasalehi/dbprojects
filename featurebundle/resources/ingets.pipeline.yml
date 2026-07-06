@@ -1,0 +1,11 @@
+resources:
+  pipelines:
+    ingets:
+      name: ingets
+      libraries:
+        - glob:
+            include: ../src/ingets/transformations/**
+      serverless: true
+      catalog: dev
+      schema: pipelines
+      root_path: ../src/ingets
