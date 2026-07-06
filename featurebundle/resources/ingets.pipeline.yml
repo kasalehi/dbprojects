@@ -7,5 +7,5 @@ resources:
             include: ../src/ingets/transformations/**
       serverless: true
       catalog: dev
-      schema: pipelines
+      schema: dev
       root_path: ../src/ingets
